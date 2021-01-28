@@ -352,10 +352,12 @@ body {
 /* .form-label > .form-field:focus {
   border: 1px solid var(--accent-color);
 } */
+
 .form-field:focus,
 .comment-field:focus {
   outline: none;
   border: 1px solid var(--accent-color);
+  cursor: pointer;
 }
 /* .form-item:focus .form-field {
   border-color: var(--accent-color);
@@ -431,7 +433,7 @@ body {
 
 .agreement {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .agreement-link {
@@ -443,17 +445,23 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  position: absolute;
 }
 
 .checkbox-icon {
   display: block;
   width: 16px;
   height: 15px;
+  margin-right: 7px;
   /* margin-right: 8px; */
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
   transition: border-color var(--animation-time) var(--timing-function),
     background-color var(--animation-time) var(--timing-function);
+}
+
+.agree-checkbox:focus + .checkbox-icon {
+  border-color: var(--accent-color);
 }
 
 .agree-checkbox:checked + .checkbox-icon {
